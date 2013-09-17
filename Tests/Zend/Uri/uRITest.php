@@ -18,4 +18,10 @@ class UriTest extends \Tests\TestCase
             $this->assertTrue(class_exists($class) || interface_exists($class));
         }
     }
+
+    public function testCanLoadHttpClass()
+    {
+        $uriHttp = \Zend_Uri::factory('http://example.com');
+        $this->assertInstanceof('\Zend_Uri_Http', $uriHttp);
+    }
 }
