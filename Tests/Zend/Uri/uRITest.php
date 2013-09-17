@@ -1,0 +1,21 @@
+<?php
+namespace Tests\Zend\Validate;
+
+class UriTest extends \Tests\TestCase
+{
+    protected $classes = array(
+        '\Zend_Uri',
+        '\Zend_Uri_Exception',
+        '\Zend_Uri_Http'
+    );
+
+    /**
+     * Ensure that the composer autoloader is finding the classes correctly.
+     */
+    public function testCanFindClasses()
+    {
+        foreach ($this->classes as $class) {
+            $this->assertTrue(class_exists($class) || interface_exists($class));
+        }
+    }
+}
