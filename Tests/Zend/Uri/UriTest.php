@@ -1,5 +1,5 @@
 <?php
-namespace Tests\Zend\Validate;
+namespace Tests\Zend\Uri;
 
 class UriTest extends \Tests\TestCase
 {
